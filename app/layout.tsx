@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -16,7 +17,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <main className="min-h-screen p-4 flex flex-col justify-center">
+          <main className="">
+            {children}
+          </main>
+          <footer className='w-full mt-6 text-xs flex-col lg:flex-row lg:items-end font-semibold flex justify-between'>
+            <span className="lg:w-1/3">
+            Developed and designed by zenku
+            </span>
+            
+            <span className='pt-3 lg:pt-0 lg:ps-3 lg:w-4/12'>
+            I created this app as a a way to forget the sadness I got after my phone was stolen on New Year's night. My exams are coming, and i am out of my mood.
+            </span>
+          </footer>
+        </main>
+      </body>
     </html>
   )
 }
