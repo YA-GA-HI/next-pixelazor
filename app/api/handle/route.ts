@@ -7,7 +7,6 @@ type ResponseData = {
 message: string
 }
 
-
 export async function GET() {
     nodeHtmlToImage({
         output: './files/image.png',
